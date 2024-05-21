@@ -4,6 +4,12 @@
             {{ __('Liste des catégories') }}
         </h2>
     </x-slot>
+
+    <x-test :class="__('bg-orange-700 flex items-center justify-center text-center text-white p-8')">
+      <x-slot name="title"><h3>Formation laravel</h3></x-slot>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </x-test>
+    
     <div class="py-12 px-12 container mx-auto ">
         @if ($errors->any())
             @foreach ($errors->all() as $error)
@@ -43,12 +49,12 @@
         @endif
         <table class="table border bg-grey-50 size-full">
             <thead>
-                <tr>
-                    <th>N°</th>
-                    <th>Date</th>
-                    <th>Nom</th>
-                    <th class="text-orange-500">Contenu</th>
-                    <th>Action</th>
+                <tr class="bg-black">
+                    <th class="text-white">N°</th>
+                    <th class="text-white">Date</th>
+                    <th class="text-white">Nom</th>
+                    <th class="text-white">Contenu</th>
+                    <th class="text-white">Action</th>
                 </tr>
             </thead>
             <tbody>
